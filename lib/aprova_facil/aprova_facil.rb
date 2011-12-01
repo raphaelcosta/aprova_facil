@@ -29,6 +29,7 @@ class AprovaFacil
       request_url = url(COMPRAR)
       request_params = cartao_credito.to_params
       xml_response = commit(request_url, request_params)
+      puts  xml_response
       treat_apc_response(xml_response)
     else
       {:aprovada => false, :resultado => cartao_credito.errors.join('\\n')}
