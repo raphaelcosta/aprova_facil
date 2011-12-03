@@ -28,6 +28,10 @@ class AprovaFacil
     if cartao_credito.valid?
       request_url = url(COMPRAR)
       puts "URL #{request_url}"
+      puts "URL #{request_url}"
+      puts "URL #{request_url}"
+      puts "URL #{request_url}"
+      puts request_url
       request_params = cartao_credito.to_params
       xml_response = commit(request_url, request_params)
       puts  xml_response
